@@ -36,9 +36,16 @@ const Page = () => {
 
         return formattedDate;
     }
-    function getDifferent(date){
-        return date - getFormattedDate();
-    }
+    const calculateDateDifference = (inputDate) => {
+        const currentDate = new Date();
+        const inputYear = parseInt(inputDate.substring(0, 4), 10);
+        const inputMonth = parseInt(inputDate.substring(4, 6), 10) - 1;
+        const inputDay = parseInt(inputDate.substring(6, 8), 10);
+        const inputDateObj = new Date(inputYear, inputMonth, inputDay);
+        const timeDifference = inputDateObj - currentDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        return daysDifference;
+    };
     const sortedList = List.slice().sort((a, b) => a.date - b.date);
     return (
         <>
@@ -49,7 +56,7 @@ const Page = () => {
                         <Link
                             key={index}
                             to={`${appurl}view/${item.name}/${item.date.toString()}`}
-                            style={{textDecoration: 'none'}}
+                            style={{ textDecoration: 'none' }}
                         >
                             <div className="list-box">
                                 <div className="row d-flex align-items-center">
@@ -58,7 +65,7 @@ const Page = () => {
                                         <p className="mb-0 text-dark">{formatDate(item.date.toString())}</p>
                                     </div>
                                     <div className="col-6 d-flex justify-content-end align-items-center">
-                                        <span style={{fontSize: '18px', color: '#000', fontWeight: '600'}}>{getDifferent(item.date) > 0 ? getDifferent(item.date) : 0} Days</span><img className="arraw-icon" style={{marginLeft: '10px'}} height={15} width={15} src={Arraw}></img>
+                                        <span style={{ fontSize: '18px', color: '#000', fontWeight: '600' }}>{calculateDateDifference(item.date.toString()) > 0 ? calculateDateDifference(item.date.toString()) : 0} Days</span><img className="arraw-icon" style={{ marginLeft: '10px' }} height={15} width={15} src={Arraw}></img>
                                     </div>
                                 </div>
                             </div>

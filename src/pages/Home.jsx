@@ -32,7 +32,16 @@ function Home() {
 
         return formattedDate;
     }
-    const days = date - getFormattedDate();
+const calculateDateDifference = (inputDate) => {
+        const currentDate = new Date();
+        const inputYear = parseInt(inputDate.substring(0, 4), 10);
+        const inputMonth = parseInt(inputDate.substring(4, 6), 10) - 1;
+        const inputDay = parseInt(inputDate.substring(6, 8), 10);
+        const inputDateObj = new Date(inputYear, inputMonth, inputDay);
+        const timeDifference = inputDateObj - currentDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        return daysDifference;
+    };
     const fulldays = formatDate(date);
     return (
         <>
@@ -46,7 +55,7 @@ function Home() {
                 </div>
                 <div className='days-view'>
                     <p className='days-title'>d-day</p>
-                    <p className='days'>{days > 0 ? days : 0}</p>
+                    <p className='days'>{calculateDateDifference(date.toString()) > 0 ? calculateDateDifference(date.toString()) : 0}</p>
                 </div>
             </div>
         </>
