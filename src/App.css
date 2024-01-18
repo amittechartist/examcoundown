@@ -1,10 +1,11 @@
 .app-body {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: #58B8FF;
   position: relative;
   font-family: 'Numans', sans-serif;
   font-family: 'Roboto Mono', monospace;
+  padding-bottom: 50px;
 }
 
 .days-title {

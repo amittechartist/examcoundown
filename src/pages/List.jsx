@@ -8,6 +8,17 @@ const Page = () => {
         { name: "CHSL", date: 20240601 },
         { name: "MTS", date: 20240701 },
         { name: "CGL", date: 20240901 },
+
+        { name: "RRB Clerk  Pre", date: 20240803 },
+        { name: "RRB Clerk  Main", date: 20241006 },
+        { name: "RRB PO Pre", date: 20240803 },
+        { name: "RRB PO Main", date: 20240929 },
+        { name: "IBPS Clerk Pre", date: 20240824 },
+        { name: "IBPS Clerk Main", date: 20241013 },
+        { name: "IBPS PO Pre", date: 20241019 },
+        { name: "IBPS PO Main", date: 20241130 },
+        { name: "IBPS SO Pre", date: 20241109 },
+        { name: "IBPS SO Main", date: 20241214 },
     ]
     function formatDate(inputDate) {
         const year = inputDate.substring(0, 4);
