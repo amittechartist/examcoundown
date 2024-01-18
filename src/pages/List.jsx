@@ -71,11 +71,11 @@ const Page = () => {
                         >
                             <div className="list-box">
                                 <div className="row d-flex align-items-center">
-                                    <div className="col-6">
+                                    <div className="col-7">
                                         <p className="mb-0 text-dark list-name">{item.name}</p>
                                         <p className="mb-0 text-dark">{formatDate(item.date.toString())}</p>
                                     </div>
-                                    <div className="col-6 d-flex justify-content-end align-items-center">
+                                    <div className="col-5 d-flex justify-content-end align-items-center">
                                         <span style={{ fontSize: '18px', color: '#000', fontWeight: '600' }}>{calculateDateDifference(item.date.toString()) > 0 ? calculateDateDifference(item.date.toString()) : 0} Days</span><img className="arraw-icon" style={{ marginLeft: '10px' }} height={15} width={15} src={Arraw}></img>
                                     </div>
                                 </div>
