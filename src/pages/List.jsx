@@ -76,7 +76,7 @@ const Page = () => {
                                         <p className="mb-0 text-dark">{formatDate(item.date.toString())}</p>
                                     </div>
                                     <div className="col-5 d-flex justify-content-end align-items-center">
-                                        <span style={{ fontSize: '18px', color: '#000', fontWeight: '600' }}>{calculateDateDifference(item.date.toString()) > 0 ? calculateDateDifference(item.date.toString()) : 0} Days</span><img className="arraw-icon" style={{ marginLeft: '10px' }} height={15} width={15} src={Arraw}></img>
+                                        <span style={{ fontSize: '15px', color: '#000', fontWeight: '600' }}>{calculateDateDifference(item.date.toString()) > 0 ? calculateDateDifference(item.date.toString()) : 0} Days</span><img className="arraw-icon" style={{ marginLeft: '10px' }} height={15} width={15} src={Arraw}></img>
                                     </div>
                                 </div>
                             </div>
