@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home';
 import List from './pages/List';
+import Questioins from './pages/Questioins';
 import { appurl } from './Helper';
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path={appurl + 'view/:name/:date'} element={<Home />} />
           <Route path={appurl} element={<List />} />
+          <Route path={appurl + 'questioins'} element={<Questioins />} />
         </Routes>
       </BrowserRouter>
     </>

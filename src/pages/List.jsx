@@ -83,6 +83,9 @@ const Page = () => {
                         </Link>
                     ))}
                 </div>
+                <div>
+                    <Link to={appurl + 'questioins'} className="w-100 btn btn-danger">Options</Link>
+                </div>
             </div>
         </>
     )
