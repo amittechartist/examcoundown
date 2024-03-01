@@ -22,7 +22,7 @@ const Page = () => {
                     <div key={index} className="col-md-12 mb-2">
                         <div className="d-flex justify-content-center">
                             <p className="mb-0 mx-1">{index + 1}.</p>
-                            {['A', 'B', 'C', 'D', 'E'].map(option => (
+                            {['A', 'B', 'C', 'D', 'E', 'X'].map(option => (
                                 <button
                                     key={option}
                                     className={`btn mx-1 ${selectedOptions[index] === option ? 'btn-success' : 'btn-outline-primary'}`}
