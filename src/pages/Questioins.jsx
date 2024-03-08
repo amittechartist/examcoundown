@@ -25,7 +25,7 @@ const Page = () => {
                             {['A', 'B', 'C', 'D', 'E', 'X'].map(option => (
                                 <button
                                     key={option}
-                                    className={`btn mx-1 ${selectedOptions[index] === option ? 'btn-success' : 'btn-outline-primary'}`}
+                                    className={`btn mx-1 ${selectedOptions[index] === option ? selectedOptions[index] == 'X' ? 'btn-danger' : 'btn-success' : 'btn-outline-primary'}`}
                                     onClick={() => handleOptionSelect(index, option)}
                                 >
                                     {option}
