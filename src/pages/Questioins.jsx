@@ -18,7 +18,7 @@ const Page = () => {
     return (
         <>
             <div className="row my-4">
-                {Array.from({ length: 50 }, (_, index) => (
+                {Array.from({ length: 500 }, (_, index) => (
                     <div key={index} className="col-md-12 mb-2">
                         <div className="d-flex justify-content-center">
                             <p className="mb-0 mx-1">{index + 1}.</p>
